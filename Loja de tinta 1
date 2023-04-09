@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        
+        System.out.print("Digite o tamanho em metros quadrados da área a ser pintada: ");
+        double area = teclado.nextDouble();
+      
+        double litrosTinta = area / 3;
+      
+        int latasTinta = (int) Math.ceil(litrosTinta / 18);
+  
+        double precoTotal = latasTinta * 80;
+      
+        System.out.println("Quantidade de latas de tinta a serem compradas: " + latasTinta);
+        System.out.printf("Preço total das latas de tinta: R$ %.2f", precoTotal);
+    }
+    teclado.close();
+}
